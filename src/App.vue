@@ -1,47 +1,37 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import Navbar from './components/MyNavbar.vue'
+import HeroSection from './components/HeroSection.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <div class="bg-gray-900 text-white min-h-screen">
+    <Navbar />
+    <HeroSection />
+    <main class="p-8">
+      <section id="about" class="h-screen pt-16">
+        <h2 class="text-2xl font-semibold">About Me</h2>
+      </section>
+      <section id="projects" class="h-screen pt-16">
+        <h2 class="text-2xl font-semibold">Projects</h2>
+      </section>
+      <section id="education" class="h-screen pt-16">
+        <h2 class="text-2xl font-semibold">Education</h2>
+      </section>
+      <section id="skills" class="h-screen pt-16">
+        <h2 class="text-2xl font-semibold">Skills</h2>
+      </section>
+      <section id="contact" class="h-screen pt-16">
+        <h2 class="text-2xl font-semibold">Contact</h2>
+      </section>
+    </main>
+  </div>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
+.min-h-screen {
+  min-height: 100vh;
 }
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+html {
+  scroll-behavior: smooth;
 }
 </style>
